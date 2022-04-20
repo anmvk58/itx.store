@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#">
+    <title>iTX Store - Shop linh kiện itx</title>
+
+    <!-- import bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./slide-show.css">
+</head>
+<body>
+    <div class="header">
+        <div class="site-branding">
+            <div class="site-logo">
+                <img width="240" height="52" src="https://itxstore.files.wordpress.com/2021/03/logo_itx_web-e1615654433797.png">
+            </div>
+            <p><a href="#">Shop link kiện build itx!</a></p>
+        </div>
+        <div class="site-menu">
+            <nav>
+                <ul>
+                    <li>Trang chủ</li>
+                    <li>Vỏ Case</li>
+                    <li>Nguồn Flex</li>
+                    <li>Liên Hệ</li>
+                    <li>About me</li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="slide-show">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                  <div class="numbertext">1 / 3</div>
+                  <img src="./images/enhance-1.png" style="width:100%">
+                  <div class="text">Caption Text</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">2 / 3</div>
+                  <img src="./images/delta-500w-1.png" style="width:100%">
+                  <div class="text">Caption Two</div>
+                </div>
+                
+                <div class="mySlides fade">
+                  <div class="numbertext">3 / 3</div>
+                  <img src="./images/enhance-1.png" style="width:100%">
+                  <div class="text">Caption Three</div>
+                </div>
+                
+            </div>
+                
+            <div style="text-align:center">
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+                <span class="dot"></span> 
+            </div>
+        </div>
+        <div class="album-show">
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+
+    </div>
+</body>
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+        setTimeout(showSlides, 2000); 
+    }
+</script>
+</html>
